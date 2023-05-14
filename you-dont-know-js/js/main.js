@@ -43,6 +43,8 @@ propsThree.append(...propsItemThree);
 propsFour.append(...propsItemFour);
 propsFive.append(...propsItemFive);
 propsSix.append(...propsItemSix);
-console.log(propsFour.querySelector('.props__item_four'));
-
+const four = propsFour.childNodes[0];
+console.log(four.textContent);
+propsFour.childNodes[0].remove();
+// propsFour.childNodes[3] =
 // console.log(propsThree);

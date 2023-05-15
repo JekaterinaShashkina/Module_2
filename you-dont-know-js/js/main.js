@@ -8,43 +8,29 @@ const itemThree = document.querySelector('.item_three');
 const itemFour = document.querySelector('.item_four');
 const itemFive = document.querySelector('.item_five');
 const itemSix = document.querySelector('.item_six');
-items.textContent = '';
 items.append(itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix);
+
 const propsItemTwo = document.querySelectorAll('.props__item_two');
 const propsItemThree = document.querySelectorAll('.props__item_three');
 const propsItemFour = document.querySelectorAll('.props__item_four');
 const propsItemFive = document.querySelectorAll('.props__item_five');
 const propsItemSix = document.querySelectorAll('.props__item_six');
 
-// console.log(...propsItemFive);
-// const itemThreeChild = ;
-// const itemFiveChild = ;
-// const itemTwoChild = ;
-// const itemFourChild = ;
-// const itemSixChild = ;
+const propsTwo = itemTwo.querySelector('.props__list');
+const propsThree = itemThree.querySelector('.props__list');
+const propsFour = itemFour.querySelector('.props__list');
+const propsFive = itemFive.querySelector('.props__list');
+const propsSix = itemSix.querySelector('.props__list');
 
-const propsTwo = itemTwo.lastElementChild.querySelector('.props__list');
-const propsThree = itemThree.lastElementChild.querySelector('.props__list');
-const propsFour = itemFour.lastElementChild.querySelector('.props__list');
-const propsFive = itemFive.lastElementChild.querySelector('.props__list');
-const propsSix = itemSix.lastElementChild.querySelector('.props__list');
-
-propsTwo.textContent = '';
-propsThree.textContent = '';
-propsFour.textContent = '';
-// console.log(propsThree);
-propsFive.textContent = '';
-propsSix.textContent = '';
-
-// console.log(propsSix);
-// propsSix.append(...propsItemSix);
 propsTwo.append(...propsItemTwo);
 propsThree.append(...propsItemThree);
 propsFour.append(...propsItemFour);
 propsFive.append(...propsItemFive);
 propsSix.append(...propsItemSix);
-const four = propsFour.childNodes[0];
-console.log(four.textContent);
-propsFour.childNodes[0].remove();
-// propsFour.childNodes[3] =
-// console.log(propsThree);
+
+propsItemFour[3].after(propsItemFour[0]);
+propsSix.prepend(itemTwo.querySelector('h2'));
+propsFive.prepend(itemSix.querySelector('h2'));
+propsTwo.prepend(itemFive.querySelector('h2'));
+const titleThree = itemThree.querySelector('h2');
+titleThree.textContent = 'This и прототипы объектов';
